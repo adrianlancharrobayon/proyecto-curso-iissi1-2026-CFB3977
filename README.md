@@ -2,10 +2,10 @@
 
 ## Miembros del grupo LX-XXX-X (sustituir)
 
-1. Apellidos, Nombre
-1. Apellidos, Nombre
-1. Apellidos, Nombre
-1. Apellidos, Nombre
+1. Lancharro Bayón, Adrián
+2. Ortega Moyano, Guillermo
+3. Arroyo Sánchez, Jesús
+4. Garrido Enríquez, Juan Luis
 
 ## 1. Introducción al problema
 
