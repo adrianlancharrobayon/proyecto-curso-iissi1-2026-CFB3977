@@ -1,4 +1,4 @@
-# Título Proyecto
+# Tienda de compra/venta de videojuegos digitales
 
 ## Miembros del grupo LX-XXX-X (sustituir)
 
@@ -11,6 +11,18 @@
 
 - Descripción del problema para poner en contexto el proyecto, incluyendo información sobre los clientes y usuarios, la situación actual, problemas, expectativas, etc. Se valorará la presencia de información multimedia (fotos, gráficos, documentos escaneados, etc.).
 
+En una época en la que el formato físico está perdiendo fuerza tras los anuncios de Sony del previsible abandono de este formato en los años venideros, hemos creado una página en la cual la venta de videojuegos online sea lo más sencilla posible y así facilitar a nuestros usuarios la compra de videojuegos.
+![alt text](<Captura de pantalla 2026-10-06 123922.png>)
+
+Vamos a crear una plataforma de venta de videojuegos digitales segura y de confianza que permita a los usuarios adquirir sus juegos en el momento, para diferentes plataformas y a unos precios competitivos. 
+Tendremos un sistema de reseñas mediante el cual los usuarios de esta página que ya los hayan probado puedan valorarlos, y así, recomendarlos a nuestros usuarios o rebajarlos en épocas de alta demanda (Navidad, Black Friday, ofertas de verano...).
+Nuestra plataforma permitirá al usuario la adquisicion del producto segura, actualizando en el momento la disponibilidad en stock y generando una factura de venta para un posible reembolso justificado correctamente a futuro.
+Queremos que a cada usuario se le recomienden los juegos según sus géneros preferidos en base a los datos que recojamos. 
+
+Nuestras expectativas son positivas a futuro, queriendo poder ofrecer a nuestro público no solo poder comprar sus juegos favoritos y deseados al momento, sino también conocer nuevos títulos relacionados los cuales puedan satisfacer aún más horas de entretenimiento.
+
+
+
 ## 2. Glosario de términos
 
 - Términos específicos del dominio del problema, ordenados alfabéticamente. Se valorará la presencia de información multimedia.
@@ -18,6 +30,9 @@
 ## 3. Visión general del sistema
 
 ### 3.1. Requisitos generales
+- Como cliente quiero una compra segura para no malgastar mi dinero.
+- 
+
 
 ### 3.2. Usuarios del sistema
 
