@@ -1,6 +1,6 @@
-# Tienda de compra/venta de videojuegos digitales
+# Tienda de videojuegos digitales
 
-## Miembros del grupo LX-XXX-X (sustituir)
+## Miembros del grupo L6-XXX-X (sustituir)
 
 1. Lancharro Bayón, Adrián
 2. Ortega Moyano, Guillermo
@@ -21,8 +21,6 @@ Queremos que a cada usuario se le recomienden los juegos según sus géneros pre
 
 Nuestras expectativas son positivas a futuro, queriendo poder ofrecer a nuestro público no solo poder comprar sus juegos favoritos y deseados al momento, sino también conocer nuevos títulos relacionados los cuales puedan satisfacer aún más horas de entretenimiento.
 
-
-
 ## 2. Glosario de términos
 
 - Términos específicos del dominio del problema, ordenados alfabéticamente. Se valorará la presencia de información multimedia.
@@ -30,21 +28,79 @@ Nuestras expectativas son positivas a futuro, queriendo poder ofrecer a nuestro 
 ## 3. Visión general del sistema
 
 ### 3.1. Requisitos generales
-- Como cliente quiero una compra segura para no malgastar mi dinero.
-- 
-
+- Como gestor del stock quiero poder visualizar a tiempo real el stock disponible.
+- Como agente de atención al cliente/soporte quiero poder consultar y responder incidencias recibidas por usuarios, además de moderar las reseñas.
+- Como proveedor de videojuegos quiero que se me garantice el pago antes de proporcionar el producto a la empresa.
+- Como administrador del sistema quiero poder hacer una configuración global de la plataforma y poder gestionar los usuarios.
+- Como cliente solicito poder comprar videojuegos de manera segura y que se me recomienden los videojuegos más adecuados según mis gustos.
+- Como departamento financiero quiero registrar compras, generar facturas y liquidar pagos con proveedores de códigos, con posibilidad de consultar ingresos y márgenes de ganancia para estudiar la evolución de la empresa.
 
 ### 3.2. Usuarios del sistema
+- Cliente
+- Gestor de stock
+- Proveedor de videojuegos
+- Agente de atención al cliente/soporte
+- Administración del sistema
+- Departamento financiero
+- 
 
 ## 4. Catálogo de requisitos
 
 ### 4.1. Requisitos funcionales
 
-#### R.F.01. Título requisito funcional
+#### R.F.01. Notificación de stock
 
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+Como cliente quiero que se me notifique por correo (si lo solicito) cuando se renueve el stock de un videojuego para poder comprarlo lo antes posible. 
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+#### R.F.02. Garantía de reembolso
+
+Como cliente quiero que se me haga una factura y se me asegure una garantía de 7 días para un reembolso en caso de error en el videojuego para evitar malgastar mi dinero.
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+#### R.F.03. Actualización del stock
+
+Como gestor del stock quiero que la cantidad en stock de un producto se actualice cada 5 minutos para poder preveer los pedidos a nuestros proveedores.
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+#### R.F.04. Gestión de Usuarios
+
+Como administración del sistema quiero dar de alta, modificar o desactivar cuentas de usuarios, tanto clientes como gestores y agentes, para regular que cada uno tenga las funciones que le corresponden.
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+#### R.F.05. Notificación cambios en la página
+
+Como administración del sistema quiero un sistema que avise de todos los futuros cambios dentro de la plataforma que los demás departamentos indiquen que se deben hacer (subida/bajada de precios, próximos lanzamientos, promociones temporales…).
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+#### R.F.06. Título requisito funcional
+
+Como cliente quiero que se me haga una factura y se me asegure una garantía de 7 días para un reembolso en caso de error en el videojuego para evitar malgastar mi dinero.
 
 **Prueba de aceptación**
 - Descripción de la primera comprobación a realizar
