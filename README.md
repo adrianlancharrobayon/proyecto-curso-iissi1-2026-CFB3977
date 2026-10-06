@@ -20,11 +20,14 @@ Tendremos un sistema de reseñas mediante el cual los usuarios de esta página q
 Nuestra plataforma permitirá al usuario la adquisicion del producto segura, actualizando en el momento la disponibilidad en stock y generando una factura de venta para un posible reembolso justificado correctamente a futuro.
 Queremos que a cada usuario se le recomienden los juegos según sus géneros preferidos en base a los datos que recojamos. 
 
-Nuestras expectativas son positivas a futuro, queriendo poder ofrecer a nuestro público no solo poder comprar sus juegos favoritos y deseados al momento, sino también conocer nuevos títulos relacionados los cuales puedan satisfacer aún más horas de entretenimiento.
+Nuestras expectativas son positivas a futuro, queriendo poder ofrecer a nuestro público no solo comprar sus juegos favoritos y deseados al momento, sino también conocer nuevos títulos relacionados los cuales puedan satisfacer aún más horas de entretenimiento.
+Además, queremos ofrecer un servicio de suscripción anual, a un precio de 100€, donde los clientes obtendrán distintas ventajas.
 
 ## 2. Glosario de términos
 
-- Términos específicos del dominio del problema, ordenados alfabéticamente. Se valorará la presencia de información multimedia.
+- PVP: Precio de Venta al Público
+- DLC: Contenido Descargable (Downloadable Content en inglés). Se trata de contenido adicional para un videojuego que se publica por internet después del lanzamiento del juego principal.
+
 
 ## 3. Visión general del sistema
 
@@ -43,7 +46,6 @@ Nuestras expectativas son positivas a futuro, queriendo poder ofrecer a nuestro 
 - Agente de atención al cliente/soporte
 - Administración del sistema
 - Departamento financiero
-- 
 
 ## 4. Catálogo de requisitos
 
@@ -129,11 +131,33 @@ Como proveedor de videojuegos quiero una garantía de compras de videojuegos mí
 
 #### 4.1.1. Requisitos de información
 
-##### R.I.01. Título requisito de información
+##### R.I.01. Información de stock al cliente
 
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+Como cliente, quiero la siguiente información sobre stock:
+- Número de productos disponible
+- Tratamiento de mi correo y propaganda
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- ...
+
+##### R.I.02. Información de garantías al cliente
+Como cliente, quiero la siguiente información sobre garantías y facturación:
+- Políticas de garantías
+- Tiempo de garantía
+- Método de facturación
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- ...
+
+##### R.I.03. Suscripciones
+
+Como cliente, quiero la siguiente información sobre abonos y suscripciones.
+- Precios de suscripciones
+- Tipos de abonos
+- Métodos de pago (mensual, anual)
+- Catálogo de videojuegos asociado a cada tipo de suscripción
 
 **Prueba de aceptación**
 - Descripción de la primera comprobación a realizar
@@ -141,10 +165,6 @@ para [razón]
 - ...
 
 #### 4.1.2. Reglas de negocio
-
-- 
-
-
 ##### R.N.01. Registro de usuario
 Un usuario no puede registrarse con un correo electrónico o nombre de usuario que ya exista en la base de datos.
 ##### R.N.02. Publicación de videojuegos
@@ -153,7 +173,7 @@ Un juego no puede ser publicado sin tener asignado previamente una plataforma (S
 Los juegos de PEGI18 no podrán ser vendidos a usuarios menores de edad.
 ##### R.N.04. Precio de los productos
 El precio de un producto no puede ser inferior al precio de adquisición pagado al proveedor de códigos.
-##### R.N.05. 
+##### R.N.05. Política de stock
 Cuando un videojuego tenga un stock disponible igual a cero, debe estar catalogado como “Agotado”, impidiendo la compra de este.
 ##### R.N.06. Registro de usuario
 ##### R.N.07. Registro de usuario
