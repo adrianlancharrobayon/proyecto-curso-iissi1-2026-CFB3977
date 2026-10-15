@@ -13,8 +13,6 @@
 
 En una época en la que el formato físico está perdiendo fuerza tras los anuncios de Sony del previsible abandono de este formato en los años venideros, hemos creado una página en la cual la venta de videojuegos online sea lo más sencilla posible y así facilitar a nuestros usuarios la compra de videojuegos.
 
-![alt text](<Captura de pantalla 2026-10-06 123922.png>)
-
 Vamos a crear una plataforma de venta de videojuegos digitales segura y de confianza que permita a los usuarios adquirir sus juegos en el momento, para diferentes plataformas y a unos precios competitivos. 
 Tendremos un sistema de reseñas mediante el cual los usuarios de esta página que ya los hayan probado puedan valorarlos, y así, recomendarlos a nuestros usuarios o rebajarlos en épocas de alta demanda (Navidad, Black Friday, ofertas de verano...).
 Nuestra plataforma permitirá al usuario la adquisicion del producto segura, actualizando en el momento la disponibilidad en stock y generando una factura de venta para un posible reembolso justificado correctamente a futuro.
@@ -32,28 +30,70 @@ Además, queremos ofrecer un servicio de suscripción anual, a un precio de 100�
 ## 3. Visión general del sistema
 
 ### 3.1. Requisitos generales
-- Como gestor del stock quiero poder visualizar a tiempo real el stock disponible.
-- Como agente de atención al cliente/soporte quiero poder consultar y responder incidencias recibidas por usuarios, además de moderar las reseñas.
-- Como proveedor de videojuegos quiero que se me garantice el pago antes de proporcionar el producto a la empresa.
-- Como administrador del sistema quiero poder hacer una configuración global de la plataforma y poder gestionar los usuarios.
-- Como cliente solicito poder comprar videojuegos de manera segura y que se me recomienden los videojuegos más adecuados según mis gustos.
-- Como departamento financiero quiero registrar compras, generar facturas y liquidar pagos con proveedores de códigos, con posibilidad de consultar ingresos y márgenes de ganancia para estudiar la evolución de la empresa.
+
+#### R.G.01 Gestión de usuarios
+Como administrador del sistema
+
+quiero poder gestionar los usuarios
+
+para tener un control de la plataforma
+
+#### R.G.02 Gestión de devoluciones
+Como administrador del sistema
+
+quiero poder gestionar las devoluciones
+
+para evitar posibles estafas
+
+#### R.G.03 Gestión de pedidos
+Como cliente
+
+quiero poder gestionar mis pedidos
+
+para revisar mis compras
+
+#### R.G.04 Gestión de productos
+Como cliente 
+
+quiero poder comprar productos de manera segura
+
+para evitar estafas.
+
+#### R.G.05 Gestión de suscripciones
+Como cliente
+
+quiero poder gestionar mis suscripciones
+
+para poder cancelarlas o activarlas cuando quiera
 
 ### 3.2. Usuarios del sistema
 - Cliente
-- Gestor de stock
-- Proveedor de videojuegos
-- Agente de atención al cliente/soporte
-- Administración del sistema
-- Departamento financiero
+- Administrador del sistema
 
 ## 4. Catálogo de requisitos
 
 ### 4.1. Requisitos funcionales
 
-#### R.F.01. Notificación de stock
+#### R.F.01.1 Listado de usuarios
 
-Como cliente quiero que se me notifique por correo (si lo solicito) cuando se renueve el stock de un videojuego para poder comprarlo lo antes posible. 
+Como administrador del sistema 
+
+quiero poder acceder a un listado de usuarios ordenados mensualmente
+
+para saber las altas y las bajas de este mes.
+ 
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+#### R.F.01.2 Creación de usuarios
+Como administrador del sistema
+
+quiero poder añadir y crear nuevos usuarios
+
+para que queden registrados en el listado.
 
 **Prueba de aceptación**
 - Descripción de la primera comprobación a realizar
@@ -61,19 +101,12 @@ Como cliente quiero que se me notifique por correo (si lo solicito) cuando se re
 - Se debe aplicar la regla de negocio R.N.XX.
 - ...
 
-#### R.F.02. Garantía de reembolso
+#### R.F.01.3 Edición de usuarios
+Como administración del sistema 
 
-Como cliente quiero que se me haga una factura y se me asegure una garantía de 7 días para un reembolso en caso de error en el videojuego para evitar malgastar mi dinero.
+quiero poder editar un usuario
 
-**Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
-
-#### R.F.03. Actualización del stock
-
-Como gestor del stock quiero que la cantidad en stock de un producto se actualice cada 5 minutos para poder preveer los pedidos a nuestros proveedores.
+para tener actualizados sus datos personales.
 
 **Prueba de aceptación**
 - Descripción de la primera comprobación a realizar
@@ -81,19 +114,12 @@ Como gestor del stock quiero que la cantidad en stock de un producto se actualic
 - Se debe aplicar la regla de negocio R.N.XX.
 - ...
 
-#### R.F.04. Gestión de Usuarios
+#### R.F.01.4 Borrado de usuarios
+Como administración del sistema
 
-Como administración del sistema quiero dar de alta, modificar o desactivar cuentas de usuarios, tanto clientes como gestores y agentes, para regular que cada uno tenga las funciones que le corresponden.
+quiero poder eliminar usuarios
 
-**Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
-
-#### R.F.05. Notificación cambios en la página
-
-Como administración del sistema quiero un sistema que avise de todos los futuros cambios dentro de la plataforma que los demás departamentos indiquen que se deben hacer (subida/bajada de precios, próximos lanzamientos, promociones temporales…).
+para que desaparezcan del listado.
 
 **Prueba de aceptación**
 - Descripción de la primera comprobación a realizar
@@ -101,9 +127,12 @@ Como administración del sistema quiero un sistema que avise de todos los futuro
 - Se debe aplicar la regla de negocio R.N.XX.
 - ...
 
-#### R.F.06. Verificación de incidencias
+#### R.F.02.1 Listado de devoluciones
+Como administrador del sistema 
 
-Como cliente quiero que se me haga una factura y se me asegure una garantía de 7 días para un reembolso en caso de error en el videojuego para evitar malgastar mi dinero.
+quiero tener un listado de devoluciones mensuales
+
+para poder gestionar las devoluciones del mes.
 
 **Prueba de aceptación**
 - Descripción de la primera comprobación a realizar
@@ -111,23 +140,202 @@ Como cliente quiero que se me haga una factura y se me asegure una garantía de 
 - Se debe aplicar la regla de negocio R.N.XX.
 - ...
 
-#### R.F.07. Garantía de compras
+#### R.F.02.2 Creación de devoluciones
+Como administrador del sistema
 
-Como proveedor de videojuegos quiero una garantía de compras de videojuegos mínimas mensuales para que la venta de códigos me salga rentable.
+quiero añadir las nuevas devoluciones
 
-**Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-
-#### R.F.08. Garantía de compras
-
-Como proveedor de videojuegos quiero una garantía de compras de videojuegos mínimas mensuales para que la venta de códigos me salga rentable.
+para que queden registradas en el listado.
 
 **Prueba de aceptación**
 - Descripción de la primera comprobación a realizar
 - Descripción de la segunda comprobación a realizar
 - Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+#### R.F.02.3 Edición de devoluciones
+Como administrador del sistema
+
+quiero poder gestionar las devoluciones
+
+para tener actualizado el listado.
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+#### R.F.02.4 Borrado de devoluciones
+Como administrador del sistema
+
+quiero borrar las devoluciones no efectuadas
+
+para que no aparezca en el listado.
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+#### R.F.03.1 Listado de pedidos
+Como cliente
+
+quiero poder acceder a mi lista de pedidos
+
+para poder gestionar mis compras.
+ 
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+#### R.F.03.2 Creación de pedidos
+Como cliente 
+
+quiero poder crear un pedido
+
+para hacer una compra.
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+#### R.F.03.3 Edición de pedidos
+Como cliente 
+
+quiero poder editar mis pedidos
+
+para gestionar mis compras.
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+#### R.F.03.4 Borrado de pedidos
+Como cliente
+
+quiero poder borrar mis pedidos
+
+para gestionar mis compras.
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+#### R.F.04.1 Listado de productos
+Como administrador del sistema
+
+quiero acceder al listado de productos disponibles
+
+para ofrecerlos en la plataforma.
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+#### R.F.04.2 Creación de productos
+Como administrador del sistema
+
+quiero poder subir productos nuevos que ofrezcamos
+
+para tener nuestra plataforma actualizada.
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+#### R.F.04.3 Edición de productos
+Como administrador del sistema
+
+quiero poder asignarle un género y un tipo de producto a los productos
+
+para que los usuarios los encuentren fácilmente.
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+#### R.F.04.4 Borrado de productos
+Como administrador del sistema
+
+quiero poder eliminar productos que ya no ofrezcamos
+
+para evitar confusiones en los usuarios.
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+#### R.F.05.1 Listado de suscripciones
+Como cliente
+
+quiero acceder a mi listado de suscripciones activas y disponibles
+
+para satisfacer mis necesidades.
+ 
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+#### R.F.05.2 Creación de suscripciones
+Como cliente
+
+quiero poder suscribirme a la plataforma
+
+para aprovechar sus ventajas.
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+#### R.F.05.3 Edición de suscripciones
+Como cliente
+
+quiero poder modificar mi plan de suscripción
+
+para satisfacer mis necesidades.
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
+#### R.F.05.4 Borrado de suscripciones
+Como cliente
+
+quiero poder cancelar mi plan de suscripción en cualquier momento
+
+para dejar de tener acceso a los servicios que ofrece una vez ya no los considere necesarios.
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- Se debe aplicar la regla de negocio R.N.XX.
+- ...
+
 
 #### 4.1.1. Requisitos de información
 
