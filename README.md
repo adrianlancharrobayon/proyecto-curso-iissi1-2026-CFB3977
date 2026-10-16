@@ -25,7 +25,7 @@ Además, queremos ofrecer un servicio de suscripción anual, a un precio de 100�
 
 - PVP: Precio de Venta al Público
 - DLC: Contenido Descargable (Downloadable Content en inglés). Se trata de contenido adicional para un videojuego que se publica por internet después del lanzamiento del juego principal.
-
+- PEGI: Información Paneuropea de Juegos (Pan European Game Information, en inglés). Es el sistema europeo de clasificación por edades y contenidos para videojuegos y software de entretenimiento
 
 ## 3. Visión general del sistema
 
@@ -75,7 +75,6 @@ para poder cancelarlas o activarlas cuando quiera
 ### 4.1. Requisitos funcionales
 
 #### R.F.01.1 Listado de usuarios
-
 Como administrador del sistema 
 
 quiero poder acceder a un listado de usuarios ordenados mensualmente
@@ -339,33 +338,76 @@ para dejar de tener acceso a los servicios que ofrece una vez ya no los consider
 
 #### 4.1.1. Requisitos de información
 
-##### R.I.01. Información de stock al cliente
+##### R.I.01. Información de usuario
 
-Como cliente, quiero la siguiente información sobre stock:
-- Número de productos disponible
-- Tratamiento de mi correo y propaganda
+Como administrador del sistema
+
+quiero la siguiente información sobre usuarios:
+	- Nombre y apellidos
+    - ID
+    - Edad
+
+Un usuario está asociado a varios pedidos.
+Un usuario puede estar asociado a una suscripción. 
+Un usuario está asociado a varias devoluciones.
+
 **Prueba de aceptación**
 - Descripción de la primera comprobación a realizar
 - Descripción de la segunda comprobación a realizar
 - ...
 
-##### R.I.02. Información de garantías al cliente
-Como cliente, quiero la siguiente información sobre garantías y facturación:
-- Políticas de garantías
-- Tiempo de garantía
-- Método de facturación
+##### R.I.02. Información de devoluciones
+Como administrador del sistema
+		
+quiero la siguiente información sobre devoluciones:
+	- Producto/s
+    - Motivo
+    - Fecha
+    - Validez
+
+Una devolución está asociada a un pedido.
+
 **Prueba de aceptación**
 - Descripción de la primera comprobación a realizar
 - Descripción de la segunda comprobación a realizar
 - ...
 
-##### R.I.03. Suscripciones
+##### R.I.03. Información de pedidos
+Como cliente
 
-Como cliente, quiero la siguiente información sobre abonos y suscripciones.
-- Precios de suscripciones
-- Tipos de abonos
-- Métodos de pago (mensual, anual)
-- Catálogo de videojuegos asociado a cada tipo de suscripción
+quiero la siguiente información sobre pedidos:
+	- Importe total
+    - Cantidad
+    - Fecha
+
+N pedidos están asociados a m productos
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- ...
+
+##### R.I.04. Información de productos
+Como cliente
+
+quiero la siguiente información sobre productos:
+	- Precio
+    - PEGI
+    - Tipo
+    - Stock
+    - Género
+
+**Prueba de aceptación**
+- Descripción de la primera comprobación a realizar
+- Descripción de la segunda comprobación a realizar
+- ...
+
+##### R.I.05. Información de suscripciones
+Como cliente
+
+quiero la siguiente información sobre suscripciones:
+	- Precio
+    - Fecha de inicio
+    - Fecha de fin
 
 **Prueba de aceptación**
 - Descripción de la primera comprobación a realizar
@@ -373,18 +415,20 @@ Como cliente, quiero la siguiente información sobre abonos y suscripciones.
 - ...
 
 #### 4.1.2. Reglas de negocio
-##### R.N.01. Registro de usuario
-Un usuario no puede registrarse con un correo electrónico o nombre de usuario que ya exista en la base de datos.
-##### R.N.02. Publicación de videojuegos
-Un juego no puede ser publicado sin tener asignado previamente una plataforma (Sony, Xbox…), un precio, una descripción y una clasificación por edad.
-##### R.N.03. Restricción de edad
-Los juegos de PEGI18 no podrán ser vendidos a usuarios menores de edad.
-##### R.N.04. Precio de los productos
-El precio de un producto no puede ser inferior al precio de adquisición pagado al proveedor de códigos.
-##### R.N.05. Política de stock
-Cuando un videojuego tenga un stock disponible igual a cero, debe estar catalogado como “Agotado”, impidiendo la compra de este.
-##### R.N.06. Registro de usuario
-##### R.N.07. Registro de usuario
+##### R.N.01. Restricción de edad
+Los juegos PEGI 18 no podrán ser vendidos a menores de edad.
+
+##### R.N.02. Restricción de importe
+El importe de un pedido no puede ser menor o igual a 0.
+
+##### R.N.03. Restricción de devolución
+No se puede devolver un producto tras 7 días de su compra.
+
+##### R.N.04. Restricción de contraseña
+La contraseña de un usuario debe tener al menos 8 caracteres.
+
+##### R.N.05. Restricción de suscripción
+La fecha de fin de suscripción no puede ser anterior a la fecha de inicio.
 
 
 
@@ -458,5 +502,10 @@ Se consideran todo tipo de constraints declarativas (aquellas definidas durante 
 -- fin entregable 3 --
 
 ## Referencias
+
+
+
+
+
 
 
