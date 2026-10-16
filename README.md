@@ -343,9 +343,8 @@ para dejar de tener acceso a los servicios que ofrece una vez ya no los consider
 Como administrador del sistema
 
 quiero la siguiente información sobre usuarios:
-	- Nombre y apellidos
-    - ID
-    - Edad
+
+Nombre y apellidos, ID, edad.
 
 Un usuario está asociado a varios pedidos.
 Un usuario puede estar asociado a una suscripción. 
@@ -360,10 +359,8 @@ Un usuario está asociado a varias devoluciones.
 Como administrador del sistema
 		
 quiero la siguiente información sobre devoluciones:
-	- Producto/s
-    - Motivo
-    - Fecha
-    - Validez
+
+Motivo, fecha, validez.
 
 Una devolución está asociada a un pedido.
 
@@ -376,9 +373,8 @@ Una devolución está asociada a un pedido.
 Como cliente
 
 quiero la siguiente información sobre pedidos:
-	- Importe total
-    - Cantidad
-    - Fecha
+
+Importe total, cantidad, fecha.
 
 N pedidos están asociados a m productos
 **Prueba de aceptación**
@@ -390,11 +386,8 @@ N pedidos están asociados a m productos
 Como cliente
 
 quiero la siguiente información sobre productos:
-	- Precio
-    - PEGI
-    - Tipo
-    - Stock
-    - Género
+
+Precio, PEGI, tipo, género.
 
 **Prueba de aceptación**
 - Descripción de la primera comprobación a realizar
@@ -405,9 +398,8 @@ quiero la siguiente información sobre productos:
 Como cliente
 
 quiero la siguiente información sobre suscripciones:
-	- Precio
-    - Fecha de inicio
-    - Fecha de fin
+
+Precio, fecha de inicio, fecha de fin.
 
 **Prueba de aceptación**
 - Descripción de la primera comprobación a realizar
