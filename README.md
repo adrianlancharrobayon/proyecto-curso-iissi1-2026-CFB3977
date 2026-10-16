@@ -11,15 +11,11 @@
 
 - Descripción del problema para poner en contexto el proyecto, incluyendo información sobre los clientes y usuarios, la situación actual, problemas, expectativas, etc. Se valorará la presencia de información multimedia (fotos, gráficos, documentos escaneados, etc.).
 
-En una época en la que el formato físico está perdiendo fuerza tras los anuncios de Sony del previsible abandono de este formato en los años venideros, hemos creado una página en la cual la venta de videojuegos online sea lo más sencilla posible y así facilitar a nuestros usuarios la compra de videojuegos.
+En una época en la que el formato físico está perdiendo fuerza frente al digital, hemos decidido crear una página en la cual la venta de videojuegos online sea lo más sencilla posible y así facilitar a nuestros usuarios la compra de videojuegos.
 
-Vamos a crear una plataforma de venta de videojuegos digitales segura y de confianza que permita a los usuarios adquirir sus juegos en el momento, para diferentes plataformas y a unos precios competitivos. 
-Tendremos un sistema de reseñas mediante el cual los usuarios de esta página que ya los hayan probado puedan valorarlos, y así, recomendarlos a nuestros usuarios o rebajarlos en épocas de alta demanda (Navidad, Black Friday, ofertas de verano...).
-Nuestra plataforma permitirá al usuario la adquisicion del producto segura, actualizando en el momento la disponibilidad en stock y generando una factura de venta para un posible reembolso justificado correctamente a futuro.
-Queremos que a cada usuario se le recomienden los juegos según sus géneros preferidos en base a los datos que recojamos. 
+Vamos a crear una plataforma de venta de videojuegos digitales segura y de confianza que permita a los usuarios adquirir sus juegos en el momento, para diferentes plataformas y a unos precios competitivos. Tendremos un sistema de reseñas mediante el cual los usuarios de esta página que ya los hayan probado puedan valorarlos, y así, recomendarlos a otros usuarios. Además, aplicaremos descuentos en épocas de alta demanda (Navidad, Black Friday, ofertas de verano...). Nuestra plataforma permitirá al usuario realizar una compra segura, generando una factura de venta que justifique correctamente cualquier reembolso posterior. Queremos que a cada usuario se le recomienden los juegos según sus géneros preferidos en base a los datos que recojamos.
 
-Nuestras expectativas son positivas a futuro, queriendo poder ofrecer a nuestro público no solo comprar sus juegos favoritos y deseados al momento, sino también conocer nuevos títulos relacionados los cuales puedan satisfacer aún más horas de entretenimiento.
-Además, queremos ofrecer un servicio de suscripción anual, a un precio de 100€, donde los clientes obtendrán distintas ventajas.
+Esperamos que la plataforma crezca en usuarios y ofrecer a nuestro público no solo comprar sus juegos favoritos y deseados al momento, sino también conocer nuevos títulos relacionados que puedan satisfacer aún más horas de entretenimiento. Además, queremos ofrecer un servicio de suscripción anual, a un precio de 100€, donde los clientes obtendrán distintas ventajas.
 
 ## 2. Glosario de términos
 
@@ -57,7 +53,7 @@ Como administrador del sistema
 
 quiero gestionar los productos
 
-para evitar estafas.
+para tener un catálogo actualizado.
 
 #### R.G.05 Gestión de suscripciones
 Como cliente
@@ -226,10 +222,8 @@ quiero poder subir productos nuevos que ofrezcamos
 para tener nuestra plataforma actualizada.
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+- Botón "Añadir Nuevo Juego". Abre una pantalla con un formulario detallado para subir nombre, precio, stock, etc. Al pulsar "Publicar", el juego aparece instantáneamente en la tienda del cliente.
+- Se deben aplicar las reglas de negocio R.N.02.Si el administrador intenta poner un precio de venta menor  o igual a cero, el sistema bloqueará el guardado indicando: "El PVP no puede generar pérdidas".
 
 #### R.F.04.3 Edición de productos
 Como administrador del sistema
@@ -239,10 +233,8 @@ quiero poder asignarle un género y un tipo de producto a los productos
 para que los usuarios los encuentren fácilmente.
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+- En el catálogo del administrador, al pulsar sobre un juego, se abrirá su ficha editable. Debe haber un desplegable para "Género" (Acción, RPG, Deportes) y otro para "Plataforma" (PC, PS5, Xbox).
+- Al modificar el precio para hacer una rebaja y pulsar "Guardar", el cambio debe verse reflejado inmediatamente en la página principal (tienda) de los usuarios, mostrando el precio anterior tachado.
 
 #### R.F.04.4 Borrado de productos
 Como administrador del sistema
@@ -252,10 +244,8 @@ quiero poder eliminar productos que ya no ofrezcamos
 para evitar confusiones en los usuarios.
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+- Botón de "Dar de baja producto" en la ficha del administrador. Al pulsarlo, pide confirmación. 
+- Tras confirmar, el juego ya no debe aparecer en la barra de búsqueda ni en el catálogo de los clientes.
 
 #### R.F.05.1 Listado de suscripciones
 Como cliente
@@ -265,10 +255,8 @@ quiero acceder a mi listado de suscripciones activas y disponibles
 para satisfacer mis necesidades.
  
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+- En el panel del Cliente habrá una sección "Mi Suscripción". Al entrar, debe mostrar una tarjeta con el estado actual ("Activa" / "Inactiva") y la fecha de la próxima renovación. 
+- Si no está suscrito, se le mostrará una pantalla de ventas detallando los beneficios de ser suscriptor.
 
 #### R.F.05.2 Creación de suscripciones
 Como cliente
@@ -278,10 +266,8 @@ quiero poder suscribirme a la plataforma
 para aprovechar sus ventajas.
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+- En la pantalla de beneficios, habrá un botón grande y llamativo que diga "Suscribirse ahora por 100€/año".
+- Al pulsarlo, llevará a una pasarela de pago seguro. Una vez completado se le desbloquearán los descuentos disponibles de forma automática en la tienda.
 
 #### R.F.05.3 Edición de suscripciones
 Como cliente
@@ -291,10 +277,8 @@ quiero poder modificar mi plan de suscripción
 para satisfacer mis necesidades.
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+- Dentro de "Mi Suscripción", debe existir un botón de "Gestionar Método de Pago". Al pulsarlo, debe permitir cambiar la tarjeta de crédito asociada a la suscripción. 
+- Al guardar la nueva tarjeta, el sistema debe confirmar que los próximos cobros anuales se realizarán en ese nuevo método. 
 
 #### R.F.05.4 Borrado de suscripciones
 Como cliente
@@ -304,10 +288,8 @@ quiero poder cancelar mi plan de suscripción en cualquier momento
 para dejar de tener acceso a los servicios que ofrece una vez ya no los considere necesarios.
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+- En la parte inferior de la pantalla "Mi Suscripción", debe haber un botón sutil que diga "Cancelar mi suscripción". Al pulsarlo, debe salir una pantalla intentando retener al usuario mostrando lo que se va a perder. 
+- Si el usuario pulsa en "Sí, cancelar de todas formas", el estado pasará a "Cancelada", pero la pantalla debe indicarle claramente que podrá seguir disfrutando de sus beneficios hasta que termine el periodo anual que ya pagó.
 
 #### 4.1.1. Requisitos de información
 
