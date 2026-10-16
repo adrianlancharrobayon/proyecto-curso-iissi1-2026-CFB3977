@@ -382,11 +382,74 @@ La fecha de fin de suscripción no puede ser anterior a la fecha de inicio.
 ### 4.2. Mapa de historias de usuario (opcional)
 
 ### 4.3. Requisitos no funcionales (opcional)
+R.NF.5.1 Fiabilidad en la cancelación de suscripciones
+Como cliente
+quiero que la cancelación de mi suscripción sea fiable
+para no pagar de manera involuntaria una suscripción.
 
-**R.N.F. 01. Título requisito no funcional**
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+Prueba de aceptación:
+
+Una vez que el cliente confirma la cancelación, el estado de la suscripción pasa a “cancelada” en el sistema antes de que se ejecute cualquier cobro posterior.
+Antes de cada cobro automático, el sistema comprueba que la suscripción sigue activa y, si está cancelada, no cobra.
+El estado actualizado se refleja en el listado de usuarios y en el de suscripciones del cliente.
+
+#### R.N.F.1.1 Rendimiento de la lista de usuarios
+Como administrador del sistema
+
+quiero que los usuarios nuevos aparezcan automáticamente en el listado
+
+para tener actualizados los datos y los usuarios.
+
+**Prueba de aceptación:**
+- Desde que un usuario completa su registro, este aparece en el listado de usuarios del administrador en menos de 500 ms, sin necesidad de recargar la página.
+
+#### R.NF.2.1 Automatización del estado de las devoluciones
+Como administrador del sistema
+
+quiero que el estado de las devoluciones se determine automáticamente
+
+para saber qué devoluciones se han aceptado o rechazado durante el periodo.
+
+**Prueba de aceptación:**
+- Al registrarse una devolución, el sistema comprueba automáticamente la fecha de compra del pedido.
+- Si han pasado más de 7 días desde la compra, la devolución se rechaza automáticamente. Se aplica la regla de negocio R.N.03.
+- Si no han pasado más de 7 días, la devolución queda en estado “pendiente de revisión manual” y aparece en el listado del administrador.
+
+#### R.NF.3.1 Rapidez y seguridad del pago
+Como cliente
+
+quiero que el pago sea rápido y sin errores
+
+para no sufrir cobros duplicados ni problemas con mi cuenta bancaria.
+
+**Prueba de aceptación:**
+- El sistema envía la solicitud de pago a la pasarela (por ejemplo, Redsys) en menos de 100 ms desde que el cliente confirma la compra.
+- Una vez que la pasarela confirma el pago, el sistema registra la confirmación en menos de 200 ms.
+- Si el cliente pulsa varias veces el botón de pago, solo se realiza un cobro.
+
+#### R.NF.4.1 Consistencia del stock en pedidos simultáneos
+Como administrador del sistema
+
+quiero que el pedido se registre rápido
+
+para que el catálogo se actualice y evitar fallos por solapamiento de pedidos.
+
+**Prueba de aceptación:**
+- Tras confirmarse un pedido, el sistema actualiza el stock del catálogo en menos de 100 ms.
+- Si dos clientes piden a la vez la última unidad de un producto, solo uno de los pedidos se acepta y el otro recibe un aviso de falta de stock.
+- Cada pedido recibe un número de referencia único, sin repeticiones aunque se registren pedidos casi a la vez.
+
+#### R.NF.5.1 Fiabilidad en la cancelación de suscripciones
+Como cliente
+
+quiero que la cancelación de mi suscripción sea fiable
+
+para no pagar de manera involuntaria una suscripción.
+
+**Prueba de aceptación:**
+- Una vez que el cliente confirma la cancelación, el estado de la suscripción pasa a “cancelada” en el sistema antes de que se ejecute cualquier cobro posterior.
+- Antes de cada cobro automático, el sistema comprueba que la suscripción sigue activa y, si está cancelada, no cobra.
+- El estado actualizado se refleja en el listado de usuarios y en el de suscripciones del cliente.
 
 -- fin entregable 1 --
 
