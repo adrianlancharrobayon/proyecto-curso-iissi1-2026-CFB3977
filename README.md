@@ -165,7 +165,7 @@ para poder gestionar mis compras.
  
 
 **Prueba de aceptación**
-- El Cliente tendrá un icono de perfil en la cabecera de la web. Al desplegarlo y pulsar en "Mis Pedidos", se abrirá una pantalla con el historial de compras(pedidos) mostrando productos,importe,cantidad y fecha.
+- El Cliente tendrá un icono de perfil en la cabecera de la web. Al desplegarlo y pulsar en "Mis Pedidos", se abrirá una pantalla con el historial de compras (pedidos) mostrando productos,importe,cantidad y fecha.
 - Si el cliente nunca ha comprado nada, en lugar de la tabla debe aparecer un mensaje: "Aún no tienes pedidos" y un botón grande que diga "Ir a la tienda".
 
 
@@ -255,7 +255,7 @@ quiero acceder a mi listado de suscripciones activas y disponibles
 para satisfacer mis necesidades.
  
 **Prueba de aceptación**
-- En el panel del Cliente habrá una sección "Mi Suscripción". Al entrar, debe mostrar una tarjeta con el estado actual ("Activa" / "Inactiva") y la fecha de la próxima renovación. 
+- En el panel del Cliente habrá una sección "Mi Suscripción". Al entrar, debe mostrar una tarjeta con el estado actual ("Activa"/"Inactiva") y la fecha de la próxima renovación. 
 - Si no está suscrito, se le mostrará una pantalla de ventas detallando los beneficios de ser suscriptor.
 
 #### R.F.05.2 Creación de suscripciones
