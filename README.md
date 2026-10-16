@@ -382,17 +382,6 @@ La fecha de fin de suscripción no puede ser anterior a la fecha de inicio.
 ### 4.2. Mapa de historias de usuario (opcional)
 
 ### 4.3. Requisitos no funcionales (opcional)
-R.NF.5.1 Fiabilidad en la cancelación de suscripciones
-Como cliente
-quiero que la cancelación de mi suscripción sea fiable
-para no pagar de manera involuntaria una suscripción.
-
-Prueba de aceptación:
-
-Una vez que el cliente confirma la cancelación, el estado de la suscripción pasa a “cancelada” en el sistema antes de que se ejecute cualquier cobro posterior.
-Antes de cada cobro automático, el sistema comprueba que la suscripción sigue activa y, si está cancelada, no cobra.
-El estado actualizado se refleja en el listado de usuarios y en el de suscripciones del cliente.
-
 #### R.N.F.1.1 Rendimiento de la lista de usuarios
 Como administrador del sistema
 
