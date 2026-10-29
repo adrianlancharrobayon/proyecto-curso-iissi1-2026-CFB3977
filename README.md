@@ -298,18 +298,21 @@ Como administrador del sistema
 
 quiero la siguiente información sobre usuarios:
 
-Nombre y apellidos, ID, edad.
+Email y contraseña.
 
-Un usuario está asociado a varios pedidos.
-Un usuario puede estar asociado a una suscripción. 
-Un usuario está asociado a varias devoluciones.
+Un usuario puede ser un cliente o un administrador del sistema.
+Un usuario cliente está asociado a varios pedidos.
+Un usuario cliente puede estar asociado a una suscripción.
+Un usuario cliente está asociado a varias devoluciones.
 
 **Prueba de aceptación**
-- Al consultar un usuario, el sistema muestra nombre y apellidos, ID y edad.
-- El ID de cada usuario es único y no se repite entre usuarios.
-- Un usuario puede tener varios pedidos asociados y varias devoluciones asociadas.
-- Un usuario puede tener como máximo una suscripción asociada.
-- La edad debe ser un número entero positivo. 
+- Al consultar un usuario, el sistema muestra su email. La contraseña nunca se muestra.
+- El email es obligatorio, tiene un formato válido y no se repite entre usuarios.
+- La contraseña es obligatoria y se almacena cifrada, nunca en texto plano.
+- Un usuario es un cliente o un administrador del sistema, nunca ambos a la vez.
+- Un usuario cliente puede tener varios pedidos asociados y varias devoluciones asociadas.
+- Un usuario cliente puede tener como máximo una suscripción asociada.
+- Un usuario administrador no tiene pedidos, devoluciones ni suscripción asociados. 
 
 #### R.I.02. Información de devoluciones
 Como administrador del sistema
@@ -445,6 +448,8 @@ para no pagar de manera involuntaria una suscripción.
 ## 5. Modelo conceptual
 
 ### 5.1. Diagramas de clases UML
+
+![Diagrama de Tienda de Videojuegos](images/TiendaVideojuegos.drawio.svg)
 
 - con restricciones.
 
