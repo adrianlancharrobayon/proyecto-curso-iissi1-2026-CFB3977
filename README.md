@@ -1,6 +1,6 @@
 # Tienda de videojuegos digitales
 
-## Miembros del grupo L6-XXX-X (sustituir)
+## Miembros del grupo L6-Grupo-1 (sustituir)
 
 1. Lancharro Bayón, Adrián
 2. Ortega Moyano, Guillermo
@@ -15,7 +15,7 @@ En una época en la que el formato físico está perdiendo fuerza frente al digi
 
 Vamos a crear una plataforma de venta de videojuegos digitales segura y de confianza que permita a los usuarios adquirir sus juegos en el momento, para diferentes plataformas y a unos precios competitivos. Tendremos un sistema de reseñas mediante el cual los usuarios de esta página que ya los hayan probado puedan valorarlos, y así, recomendarlos a otros usuarios. Además, aplicaremos descuentos en épocas de alta demanda (Navidad, Black Friday, ofertas de verano...). Nuestra plataforma permitirá al usuario realizar una compra segura, generando una factura de venta que justifique correctamente cualquier reembolso posterior. Queremos que a cada usuario se le recomienden los juegos según sus géneros preferidos en base a los datos que recojamos.
 
-Esperamos que la plataforma crezca en usuarios y ofrecer a nuestro público no solo comprar sus juegos favoritos y deseados al momento, sino también conocer nuevos títulos relacionados que puedan satisfacer aún más horas de entretenimiento. Además, queremos ofrecer un servicio de suscripción anual, a un precio de 100€, donde los clientes obtendrán distintas ventajas.
+Esperamos que la plataforma crezca en usuarios y ofrecer a nuestro público no solo comprar sus juegos favoritos y deseados al momento, sino también conocer nuevos títulos relacionados que puedan satisfacer aún más horas de entretenimiento. Además, queremos ofrecer un servicio de suscripción anual, a un precio de 50€, donde los clientes obtendrán distintas ventajas.
 
 ## 2. Glosario de términos
 
@@ -78,7 +78,7 @@ quiero poder acceder a un listado de usuarios ordenados mensualmente
 para saber las altas y las bajas de este mes.
  
 **Prueba de aceptación**
-- Al acceder como Administrador, en el menú lateral debe existir un botón llamado "Gestión de Usuarios". Al pulsarlo, debe cargar una pantalla con una tabla de datos que muestre las columnas: email y contraseña.
+- Al acceder como Administrador, en el menú lateral debe existir un botón llamado "Gestión de Usuarios". Al pulsarlo, debe cargar una pantalla con una tabla de datos que muestre la columna: email.
 - Debe existir un menú desplegable (filtro) llamado "Filtrar por mes". Al seleccionar un mes (ej. Diciembre), la tabla debe actualizarse automáticamente para mostrar solo las altas y bajas de ese mes.
 
 #### R.F.01.2 Creación de usuarios
@@ -92,7 +92,7 @@ para que queden registrados en el listado.
 - Debe haber un botón llamado "Añadir Nuevo Usuario". Al pulsarlo, se debe abrir una ventana emergente pidiendo: email y contraseña. Al rellenar los datos y pulsar el botón "Guardar", debe aparecer una notificación verde indicando "Usuario creado con éxito". 
 
 #### R.F.01.3 Edición de usuarios
-Como administración del sistema 
+Como administrador del sistema 
 
 quiero poder editar un usuario
 
@@ -103,7 +103,7 @@ para tener actualizados sus datos personales.
 - Al modificar cualquier campo (por ejemplo, cambiar el correo) y pulsar en el botón "Actualizar", la ventana se cerrará, la tabla se refrescará mostrando el nuevo dato y saldrá un aviso: "Usuario actualizado correctamente".
 
 #### R.F.01.4 Borrado de usuarios
-Como administración del sistema
+Como administrador del sistema
 
 quiero poder eliminar usuarios
 
@@ -178,7 +178,7 @@ para hacer una compra.
 
 **Prueba de aceptación**
 - En el Carrito de compra, al pulsar el botón "Finalizar Compra", el usuario pasará a una pantalla de pasarela de pago. Tras introducir sus datos y pulsar "Pagar", si el pago es correcto, será redirigido a una pantalla de "¡Gracias por tu compra!" y se generará la factura.
-- Se deben aplicar las reglas de negocio R.N.01. Si el carrito incluye un juego PEGI 18 y la fecha de nacimiento del cliente indica que es menor de edad, el botón "Pagar" se desactivará y saldrá un aviso: "No tienes edad suficiente para comprar uno de los artículos".
+- Se deben aplicar las reglas de negocio R.N.01. Si el carrito incluye un juego PEGI 18 y la edad del cliente indica que es menor de edad, el botón "Pagar" se desactivará y saldrá un aviso: "No tienes edad suficiente para comprar uno de los artículos".
 
 #### R.F.03.3 Edición de pedidos
 Como cliente 
@@ -223,7 +223,7 @@ para tener nuestra plataforma actualizada.
 
 **Prueba de aceptación**
 - Botón "Añadir Nuevo Juego". Abre una pantalla con un formulario detallado para subir nombre, precio, stock, etc. Al pulsar "Publicar", el juego aparece instantáneamente en la tienda del cliente.
-- Se deben aplicar las reglas de negocio R.N.02.Si el administrador intenta poner un precio de venta menor  o igual a cero, el sistema bloqueará el guardado indicando: "El PVP no puede generar pérdidas".
+- Si el administrador intenta poner un precio de venta menor  o igual a cero, el sistema bloqueará el guardado indicando: "El PVP no puede generar pérdidas".
 
 #### R.F.04.3 Edición de productos
 Como administrador del sistema
@@ -266,7 +266,7 @@ quiero poder suscribirme a la plataforma
 para aprovechar sus ventajas.
 
 **Prueba de aceptación**
-- En la pantalla de beneficios, habrá un botón grande y llamativo que diga "Suscribirse ahora por 100€/año".
+- En la pantalla de beneficios, habrá un botón grande y llamativo que diga "Suscribirse ahora por 50€/año".
 - Al pulsarlo, llevará a una pasarela de pago seguro. Una vez completado se le desbloquearán los descuentos disponibles de forma automática en la tienda.
 
 #### R.F.05.3 Edición de suscripciones
@@ -298,7 +298,7 @@ Como administrador del sistema
 
 quiero la siguiente información sobre usuarios:
 
-Email y contraseña.
+Email y contraseña. Además, un usuario cliente tiene nombre y edad, y un usuario administrador del sistema tiene nombre.
 
 Un usuario puede ser un cliente o un administrador del sistema.
 Un usuario cliente está asociado a varios pedidos.
@@ -319,12 +319,12 @@ Como administrador del sistema
 		
 quiero la siguiente información sobre devoluciones:
 
-Motivo, fecha, validez.
+Motivo, fecha de solicitud, validez.
 
 Una devolución está asociada a un pedido.
 
 **Prueba de aceptación**
-- Al consultar una devolución, el sistema muestra motivo, fecha y validez.
+- Al consultar una devolución, el sistema muestra motivo, fecha de solicitud y validez.
 - Toda devolución está asociada a un único pedido; no puede existir una devolución sin pedido.
 - La validez de la devolución es coherente con la fecha de compra del pedido: no es válida si han pasado más de 7 días. Se aplica la regla de negocio R.N.03.
 
@@ -333,11 +333,11 @@ Como cliente
 
 quiero la siguiente información sobre pedidos:
 
-Importe total, cantidad, fecha.
+Importe total y fecha de compra.
 
 N pedidos están asociados a m productos
 **Prueba de aceptación**
-- Al consultar un pedido, el sistema muestra importe total, cantidad y fecha.
+- Al consultar un pedido, el sistema muestra importe total y la fecha.
 - El importe total es siempre mayor que 0. Se aplica la regla de negocio R.N.02.
 - Un pedido puede incluir varios productos, y un mismo producto puede aparecer en varios pedidos.
 - El importe total coincide con la suma de los precios de los productos del pedido por su cantidad.
@@ -347,7 +347,7 @@ Como cliente
 
 quiero la siguiente información sobre productos:
 
-Precio, PEGI, tipo, género, nombre, plataforma.
+Precio unitario, cantidad, PEGI, tipo, género, nombre, plataforma.
 
 **Prueba de aceptación**
 - Al consultar un producto, el sistema muestra precio, PEGI, tipo, género, nombre y plataforma.
@@ -363,7 +363,7 @@ Precio, fecha de inicio, fecha de fin.
 
 **Prueba de aceptación**
 - Al consultar una suscripción, el sistema muestra precio, fecha de inicio y fecha de fin.
-- La fecha de fin no es anterior a la fecha de inicio. Se aplica la regla de negocio R.N.05.
+- La fecha de fin no es anterior a la fecha de inicio.
 - Una suscripción pertenece a un único usuario.
 
 #### 4.1.2. Reglas de negocio
@@ -374,13 +374,16 @@ Los juegos PEGI 18 no podrán ser vendidos a menores de edad.
 El importe de un pedido no puede ser menor o igual a 0.
 
 ##### R.N.03. Restricción de devolución
-No se puede devolver un producto tras 7 días de su compra.
+No se puede devolver un pedido tras 7 días de su compra.
 
 ##### R.N.04. Restricción de contraseña
 La contraseña de un usuario debe tener al menos 8 caracteres.
 
 ##### R.N.05. Restricción de suscripción
-La fecha de fin de suscripción no puede ser anterior a la fecha de inicio.
+Si tienes suscripción activa el precio tiene un 20% descuento.
+
+##### R.N.06. Restricción de pedidos
+Un cliente no puede realizar mas de 10 pedidos al mes.
 
 ### 4.2. Mapa de historias de usuario (opcional)
 
