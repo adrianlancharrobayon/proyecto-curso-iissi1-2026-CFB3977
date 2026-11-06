@@ -352,7 +352,7 @@ Precio unitario, cantidad, PEGI, tipo, género, nombre, plataforma.
 **Prueba de aceptación**
 - Al consultar un producto, el sistema muestra precio, PEGI, tipo, género, nombre y plataforma.
 - El precio es un valor numérico mayor que 0 expresado en euros.
-- El PEGI es uno de los valores admitidos (3, 7, 12, 16 o 18) y se usa para aplicar la restricción de edad. Se aplica la regla de negocio R.N.01.
+- El PEGI es uno de los valores admitidos (0, 3, 7, 12, 16 o 18) y se usa para aplicar la restricción de edad. Se aplica la regla de negocio R.N.01.
 
 ##### R.I.05. Información de suscripciones
 Como cliente
