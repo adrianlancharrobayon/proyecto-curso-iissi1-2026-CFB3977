@@ -222,7 +222,7 @@ quiero poder subir productos nuevos que ofrezcamos
 para tener nuestra plataforma actualizada.
 
 **Prueba de aceptación**
-- Botón "Añadir Nuevo Juego". Abre una pantalla con un formulario detallado para subir nombre, precio, stock, etc. Al pulsar "Publicar", el juego aparece instantáneamente en la tienda del cliente.
+- Botón "Añadir Nuevo Juego". Abre una pantalla con un formulario detallado para subir nombre, precio, etc. Al pulsar "Publicar", el juego aparece instantáneamente en la tienda del cliente.
 - Si el administrador intenta poner un precio de venta menor  o igual a cero, el sistema bloqueará el guardado indicando: "El PVP no puede generar pérdidas".
 
 #### R.F.04.3 Edición de productos
@@ -303,7 +303,6 @@ Email y contraseña. Además, un usuario cliente tiene nombre y edad, y un usuar
 Un usuario puede ser un cliente o un administrador del sistema.
 Un usuario cliente está asociado a varios pedidos.
 Un usuario cliente puede estar asociado a una suscripción.
-Un usuario cliente está asociado a varias devoluciones.
 
 **Prueba de aceptación**
 - Al consultar un usuario, el sistema muestra su email. La contraseña nunca se muestra.
@@ -319,12 +318,12 @@ Como administrador del sistema
 		
 quiero la siguiente información sobre devoluciones:
 
-Motivo, fecha de solicitud, validez.
+Motivo, fecha de solicitud, estado.
 
 Una devolución está asociada a un pedido.
 
 **Prueba de aceptación**
-- Al consultar una devolución, el sistema muestra motivo, fecha de solicitud y validez.
+- Al consultar una devolución, el sistema muestra motivo, fecha de solicitud y estado.
 - Toda devolución está asociada a un único pedido; no puede existir una devolución sin pedido.
 - La validez de la devolución es coherente con la fecha de compra del pedido: no es válida si han pasado más de 7 días. Se aplica la regla de negocio R.N.03.
 
@@ -478,6 +477,7 @@ para no pagar de manera involuntaria una suscripción.
 | ...   |            |            |            |            |
 
 -- fin entregable 2 --
+
 
 ## 7. Modelo relacional en 3FN
 
