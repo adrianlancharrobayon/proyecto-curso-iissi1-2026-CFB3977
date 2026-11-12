@@ -462,17 +462,40 @@ para no pagar de manera involuntaria una suscripción.
 
 ## 6. Matrices de trazabilidad
 
-- Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
-
-|       | EntidadX   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
-|:------|:-----------|:-----------|:-----------|:-----------|
-| RI-1  | X          | X          | X          | X          |
-| RI-2  |            | X          |            | X          |
-| RF-1  |            | X          |            | X          |
-| RF-2  | X          |            | X          | X          |
-| RN-1  |            | X          |            |            |
-| RN-2  | X          | X          | X          |            |
-| ...   |            |            |            |            |
+| Requisito | Usuario | Cliente | Admin. | Pedido | Producto | Devolución | Suscripción | TipoProducto | TipoPEGI | Gen. Usuario | Compra | Contiene | Pedido–Devol. | Cliente–Susc. | R.N.01 | R.N.02 | R.N.03 | R.N.04 | R.N.05 | R.N.06 | R.N.07 |
+|:----------|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| R.F.01.1 | X |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| R.F.01.2 | X |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | X |   |   |   |
+| R.F.01.3 | X |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| R.F.01.4 | X |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| R.F.02.1 |   | X |   | X |   | X |   |   |   |   | X |   | X |   |   |   |   |   |   |   |   |
+| R.F.02.2 |   | X |   | X | X | X |   | X |   |   | X | X | X |   |   |   | X |   |   |   | X |
+| R.F.02.3 |   | X |   | X |   | X |   |   |   |   | X |   | X |   |   |   |   |   |   |   |   |
+| R.F.02.4 |   |   |   |   |   | X |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| R.F.03.1 |   | X |   | X | X |   |   |   |   |   | X | X |   |   |   |   |   |   |   |   |   |
+| R.F.03.2 |   | X |   | X | X |   | X |   | X |   | X | X |   | X | X | X |   |   | X | X |   |
+| R.F.03.3 |   | X |   | X |   |   |   |   |   |   | X |   |   |   |   |   |   |   |   |   |   |
+| R.F.03.4 |   | X |   | X |   |   |   |   |   |   | X |   |   |   |   |   |   |   |   |   |   |
+| R.F.04.1 |   |   |   |   | X |   |   | X | X |   |   |   |   |   |   |   |   |   |   |   |   |
+| R.F.04.2 |   |   |   |   | X |   |   | X | X |   |   |   |   |   |   |   |   |   |   |   |   |
+| R.F.04.3 |   |   |   |   | X |   |   | X |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| R.F.04.4 |   |   |   |   | X |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| R.F.05.1 |   | X |   |   |   |   | X |   |   |   |   |   |   | X |   |   |   |   |   |   |   |
+| R.F.05.2 |   | X |   |   |   |   | X |   |   |   |   |   |   | X |   |   |   |   | X |   |   |
+| R.F.05.3 |   | X |   |   |   |   | X |   |   |   |   |   |   | X |   |   |   |   |   |   |   |
+| R.F.05.4 |   | X |   |   |   |   | X |   |   |   |   |   |   | X |   |   |   |   | X |   |   |
+| R.I.01 | X | X | X | X |   |   | X |   |   | X | X |   |   | X |   |   |   | X |   |   |   |
+| R.I.02 |   |   |   | X |   | X |   |   |   |   |   |   | X |   |   |   | X |   |   |   |   |
+| R.I.03 |   |   |   | X | X |   |   |   |   |   |   | X |   |   |   | X |   |   |   |   |   |
+| R.I.04 |   |   |   |   | X |   |   | X | X |   |   |   |   |   | X |   |   |   |   |   |   |
+| R.I.05 |   | X |   |   |   |   | X |   |   |   |   |   |   | X |   |   |   |   |   |   |   |
+| R.N.01 |   | X |   | X | X |   |   |   | X |   | X | X |   |   | X |   |   |   |   |   |   |
+| R.N.02 |   |   |   | X |   |   |   |   |   |   |   |   |   |   |   | X |   |   |   |   |   |
+| R.N.03 |   |   |   | X |   | X |   |   |   |   |   |   | X |   |   |   | X |   |   |   |   |
+| R.N.04 | X |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | X |   |   |   |
+| R.N.05 |   | X |   | X | X |   | X |   |   |   |   |   |   | X |   |   |   |   | X |   |   |
+| R.N.06 |   | X |   | X |   |   |   |   |   |   | X |   |   |   |   |   |   |   |   | X |   |
+| R.N.07 |   |   |   | X | X | X |   | X |   |   |   | X | X |   |   |   |   |   |   |   | X |
 
 -- fin entregable 2 --
 
