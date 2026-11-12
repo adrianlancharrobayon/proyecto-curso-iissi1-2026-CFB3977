@@ -313,7 +313,7 @@ Un usuario cliente puede estar asociado a una suscripción.
 - Un usuario cliente puede tener como máximo una suscripción asociada.
 - Un usuario administrador no tiene pedidos ni suscripción asociados. 
 
-#### R.I.02. Información de devoluciones
+##### R.I.02. Información de devoluciones
 Como administrador del sistema
 		
 quiero la siguiente información sobre devoluciones:
