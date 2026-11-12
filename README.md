@@ -385,6 +385,9 @@ Si tienes suscripción activa el precio tiene un 20% descuento.
 ##### R.N.06. Restricción de pedidos
 Un cliente no puede realizar mas de 10 pedidos al mes.
 
+##### R.N.07. Restricción de devolución en DLCs
+No se pueden devolver productos de tipo DLC.
+
 ### 4.2. Mapa de historias de usuario (opcional)
 
 ### 4.3. Requisitos no funcionales (opcional)
