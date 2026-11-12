@@ -75,11 +75,11 @@ Como administrador del sistema
 
 quiero poder acceder a un listado de usuarios ordenados mensualmente
 
-para saber las altas y las bajas de este mes.
+para saber las altas de este mes.
  
 **Prueba de aceptación**
 - Al acceder como Administrador, en el menú lateral debe existir un botón llamado "Gestión de Usuarios". Al pulsarlo, debe cargar una pantalla con una tabla de datos que muestre la columna: email.
-- Debe existir un menú desplegable (filtro) llamado "Filtrar por mes". Al seleccionar un mes (ej. Diciembre), la tabla debe actualizarse automáticamente para mostrar solo las altas y bajas de ese mes.
+- Debe existir un menú desplegable (filtro) llamado "Filtrar por mes". Al seleccionar un mes (ej. Diciembre), la tabla debe actualizarse automáticamente para mostrar solo las altas de ese mes.
 
 #### R.F.01.2 Creación de usuarios
 Como administrador del sistema
@@ -121,7 +121,7 @@ quiero tener un listado de devoluciones mensuales
 para poder gestionar las devoluciones del mes.
 
 **Prueba de aceptación**
-- El Administrador tendrá una pestaña en su panel de control llamada "Devoluciones". Al hacer clic, se mostrará una tabla con: cliente,pedido,motivo,validez y fecha. 
+- El Administrador tendrá una pestaña en su panel de control llamada "Devoluciones". Al hacer clic, se mostrará una tabla con: cliente,pedido,motivo, estado y fecha. 
 
 #### R.F.02.2 Creación de devoluciones
 Como administrador del sistema
@@ -298,7 +298,7 @@ Como administrador del sistema
 
 quiero la siguiente información sobre usuarios:
 
-Email y contraseña. Además, un usuario cliente tiene nombre y edad, y un usuario administrador del sistema tiene nombre.
+Email, contraseña y fecha de alta. Además, un usuario cliente tiene nombre y edad, y un usuario administrador del sistema tiene nombre.
 
 Un usuario puede ser un cliente o un administrador del sistema.
 Un usuario cliente está asociado a varios pedidos.
@@ -309,9 +309,9 @@ Un usuario cliente puede estar asociado a una suscripción.
 - El email es obligatorio, tiene un formato válido y no se repite entre usuarios.
 - La contraseña es obligatoria y se almacena cifrada, nunca en texto plano.
 - Un usuario es un cliente o un administrador del sistema, nunca ambos a la vez.
-- Un usuario cliente puede tener varios pedidos asociados y varias devoluciones asociadas.
+- Un usuario cliente puede tener varios pedidos asociados.
 - Un usuario cliente puede tener como máximo una suscripción asociada.
-- Un usuario administrador no tiene pedidos, devoluciones ni suscripción asociados. 
+- Un usuario administrador no tiene pedidos ni suscripción asociados. 
 
 #### R.I.02. Información de devoluciones
 Como administrador del sistema
@@ -325,7 +325,7 @@ Una devolución está asociada a un pedido.
 **Prueba de aceptación**
 - Al consultar una devolución, el sistema muestra motivo, fecha de solicitud y estado.
 - Toda devolución está asociada a un único pedido; no puede existir una devolución sin pedido.
-- La validez de la devolución es coherente con la fecha de compra del pedido: no es válida si han pasado más de 7 días. Se aplica la regla de negocio R.N.03.
+- El estado de la devolución es coherente con la fecha de compra del pedido: queda rechazada si han pasado más de 7 días. Se aplica la regla de negocio R.N.03.
 
 ##### R.I.03. Información de pedidos
 Como cliente
@@ -424,17 +424,15 @@ para no sufrir cobros duplicados ni problemas con mi cuenta bancaria.
 - Una vez que la pasarela confirma el pago, el sistema registra la confirmación en menos de 200 ms.
 - Si el cliente pulsa varias veces el botón de pago, solo se realiza un cobro.
 
-#### R.NF.4.1 Consistencia del stock en pedidos simultáneos
+#### R.NF.4.1 Unicidad de los pedidos simultáneos
 Como administrador del sistema
-
-quiero que el pedido se registre rápido
-
-para que el catálogo se actualice y evitar fallos por solapamiento de pedidos.
+quiero que cada pedido se registre de forma rápida y única
+para evitar pedidos o claves digitales duplicados por solapamiento de pedidos.
 
 **Prueba de aceptación:**
-- Tras confirmarse un pedido, el sistema actualiza el stock del catálogo en menos de 100 ms.
-- Si dos clientes piden a la vez la última unidad de un producto, solo uno de los pedidos se acepta y el otro recibe un aviso de falta de stock.
+- Tras confirmarse el pago, el sistema registra el pedido en menos de 100 ms.
 - Cada pedido recibe un número de referencia único, sin repeticiones aunque se registren pedidos casi a la vez.
+- Cada pedido recibe del proveedor una clave digital distinta, que no se entrega a ningún otro pedido.
 
 #### R.NF.5.1 Fiabilidad en la cancelación de suscripciones
 Como cliente
